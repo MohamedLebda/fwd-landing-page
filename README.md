@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [live site URL](https://mohamedlebda.github.io/frontend-mentor-product-preview-card/)
+- Live Site URL: [live site URL](https://mohamedlebda.github.io/fwd-landing-page/)
 
 ## My process
 
