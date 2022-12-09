@@ -14,10 +14,23 @@ for (let section of sections) {
   const anchor = document.createElement("a");
   li.appendChild(anchor);
   anchor.textContent = section.querySelector("h2").textContent;
-  // Scroll to section on link click
-  anchor.setAttribute("href", `#${section.id}`);
+  // Set data attribute to  the target section id
+  anchor.setAttribute("data-target", `${section.id}`);
+  anchor.setAttribute("href", "");
   nav.appendChild(li);
 }
+
+// scroll to target section
+nav.childNodes.forEach((listItem) => {
+  listItem.addEventListener("click", (e) => {
+    e.preventDefault();
+    document
+      .getElementById(listItem.firstChild.getAttribute("data-target"))
+      .scrollIntoView({
+        behavior: "smooth",
+      });
+  });
+});
 
 // scroll to the top button
 window.addEventListener("scroll", () => {
